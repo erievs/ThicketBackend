@@ -1,0 +1,120 @@
+{
+  "code": "",
+  "data": {
+    "count": 2,
+    "anchorStr": "1430063523815403520",
+    "records": [
+      {
+        "liked": 0,
+        "videoDashUrl": null,
+        "foursquareVenueId": "",
+        "remixDisabled": 0,
+        "userId": 1234,
+        "private": 0,
+        "foursquareVenueIdStr": "",
+        "postIdStr": "5678",
+        "videoWebmUrl": null,
+        "loops": {
+          "count": 150.0,
+          "velocity": 2.5,
+          "onFire": 0
+        },
+        "thumbnailUrl": "https://example.com/thumbnail1.jpg",
+        "explicitContent": 0,
+        "myRepostId": 0,
+        "blocked": 0,
+        "verified": 1,
+        "entities": [],
+        "avatarUrl": "https://example.com/avatar1.jpg",
+        "description": "A funny vine clip",
+        "comments": {
+          "count": 10,
+          "anchorStr": "",
+          "records": [],
+          "nextPage": null,
+          "backAnchor": "",
+          "anchor": null,
+          "previousPage": null,
+          "size": 0
+        },
+        "videoLowURL": null,
+        "videoUrls": [
+          {
+            "videoUrl": "https://example.com/video1_360p.mp4",
+            "format": "h264",
+            "default": 1,
+            "idStr": "original",
+            "rate": 200,
+            "id": "original"
+          },
+          {
+            "rate": 0,
+            "format": "h264",
+            "videoUrl": "https://example.com/video1_240p.mp4",
+            "id": "r2",
+            "idStr": "r2"
+          },
+          {
+            "videoUrl": "https://example.com/video1_dash.mp4",
+            "format": "dash",
+            "default": 1,
+            "idStr": "h264dash",
+            "rate": 0,
+            "id": "h264dash"
+          },
+          {
+            "videoUrl": "https://example.com/video1_dash.mp4",
+            "format": "h264c",
+            "default": 1,
+            "idStr": "r2",
+            "rate": 0,
+            "id": "r2"
+          }
+        ],
+        "username": "cool_user",
+        "userIdStr": "1234",
+        "vanityUrls": [],
+        "tags": [],
+        "permalinkUrl": "https://vine.co/v/5678",
+        "following": 0,
+        "myRepostIdStr": "",
+        "postId": 5678,
+        "likes": {
+          "count": 305,
+          "anchorStr": "1430771454466744320",
+          "records": [],
+          "nextPage": null,
+          "backAnchor": "",
+          "anchor": 1430771454466744320,
+          "previousPage": null,
+          "size": 6
+        },
+        "videoUrl": null,
+        "followRequested": 0,
+        "created": "2023-07-01 12:00:00",
+        "hasSimilarPosts": 0,
+        "shareUrl": "https://vine.co/v/5678",
+        "profileBackground": "#00FF00",
+        "promoted": 0,
+        "reposts": {
+          "count": 42,
+          "anchorStr": "",
+          "records": [],
+          "nextPage": null,
+          "backAnchor": "",
+          "anchor": null,
+          "previousPage": null,
+          "size": 0
+        }
+      }
+      // Additional records could go here
+    ],
+    "nextPage": null,
+    "backAnchor": "1430767489536634880",
+    "anchor": 1430063523815403520,
+    "previousPage": null,
+    "size": 20
+  },
+  "success": true,
+  "error": ""
+}
