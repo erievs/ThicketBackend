@@ -102,7 +102,9 @@ namespace ShittyVineRI {
                 var vineToMake = new Vine {
                     VideoUrl = vine.VideoUrl,
                     ThumbnailUrl = vine.ThumbnailUrl,
-                    Description = vine.Description
+                    Description = vine.Description,
+                    Username = "Placeholder",
+                    Date = DateTime.UtcNow
                 };
 
                 Console.WriteLine("Vine someone just vine " + Newtonsoft.Json.JsonConvert.SerializeObject(vineToMake));

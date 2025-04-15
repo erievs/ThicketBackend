@@ -75,6 +75,8 @@ UploadHandler.HandleThumbnailUploads(app);
 
 UploadHandler.HandlePostingVideos(app);
 
+UserStuff.HandleMe(app);
+
 FileDeliveryStuff.VideoDeliveryService(app);
 
 FileDeliveryStuff.ThumbnailDeliveryService(app);

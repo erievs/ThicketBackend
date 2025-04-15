@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/ShittyVineReImplemtion.csproj": {}
+    "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/ShittyVineReImplemtion.csproj": {}
   },
   "projects": {
-    "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/ShittyVineReImplemtion.csproj": {
+    "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/ShittyVineReImplemtion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/ShittyVineReImplemtion.csproj",
+        "projectUniqueName": "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/ShittyVineReImplemtion.csproj",
         "projectName": "ShittyVineReImplemtion",
-        "projectPath": "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/ShittyVineReImplemtion.csproj",
+        "projectPath": "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/ShittyVineReImplemtion.csproj",
         "packagesPath": "/home/ksportalcraft/.nuget/packages/",
-        "outputPath": "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/obj/",
+        "outputPath": "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ksportalcraft/.nuget/NuGet/NuGet.Config"
@@ -20,6 +20,7 @@
           "net8.0"
         ],
         "sources": {
+          "/home/ksportalcraft/.dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -88,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/ksportalcraft/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,6 +8,7 @@ namespace ShittyVineRI {
 
     public static class Utils {
         private static Random random = new Random();
+        private static Guid uuidMaker = Guid.NewGuid();
 
         public static string GenerateAlphaNumeroic(int length)
         {
@@ -16,6 +17,9 @@ namespace ShittyVineRI {
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        public static string CreateKey() {
+            return uuidMaker.ToString();;
+        }
 
         // some binder I found on stack overflow that works well for url encoded requsts
         // https://stackoverflow.com/questions/72579605/accept-x-www-form-urlencoded-in-minimal-api-net-6

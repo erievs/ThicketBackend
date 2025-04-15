@@ -1,10 +1,12 @@
-using System.Text.Json;
 
+using System.Data.Common;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 
 namespace ShittyVineRI {
 
     public static class TimeLine {
+  
 
         public static void TimeLineGraph (WebApplication app) {
 
@@ -12,15 +14,58 @@ namespace ShittyVineRI {
 
                     Console.WriteLine("test");
 
+                    var allVines = new List<VineTimeLineRecord>();
+        
+
+                    foreach(Vine vine in db.Vines) {
+
+                        
+                        
+                        var addToVineList = new VineTimeLineRecord {
+                            Username = vine.Username ?? "Placeholder",
+                            VideoLowUrl = vine.VideoUrl,
+                            VideoDashUrl = vine.VideoUrl,
+                            Liked = 0,
+                            PostToTwitter = 0,
+                            VideoUrl = vine.VideoUrl,
+                            Description = vine.Description ?? "Nothing",
+                            Created = vine.Date ?? DateTime.UtcNow,
+                            AvatarUrl = null,
+                            UserId = 331,
+                            ThumbnailUrl = vine.ThumbnailUrl,
+                            FoursquareVenueId = 211,
+                            PostToFacebook = 0,
+                            Promoted = 0,
+                            Verified = 0,
+                            PostId = 3313,
+                            ExplicitContent = 0,
+                            Tags = [],
+                            Location = "Paris, France"
+              
+                        };
+
+                        allVines.Add(addToVineList);
+
+                    }
+
+
                     var json = new VineTimeLine {
 
                         Code = "",
+                        Data = new VineTimeLineData {
+                            Count = allVines.Count,
+                            NextPage = null,
+                            PreviousPage = null,
+                            Records = allVines,
+                            Size = 250
+                        },
                         Success = true,
                         Error = ""
 
                     };
+                    
 
-                    Console.WriteLine(json);
+                    Console.WriteLine(allVines);
 
                     if(request.Headers.UserAgent.ToString().StartsWith("iphone")) {
 
@@ -32,7 +77,7 @@ namespace ShittyVineRI {
 
 
                     return json;
-
+    
 
             });
              

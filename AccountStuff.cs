@@ -14,6 +14,7 @@ namespace ShittyVineRI {
 
                 var realUser = new Account {
                     Id = user.Id,
+                    Username = user.Username,
                     Email = user.Email,
                     Password = user.Password
                 };
@@ -29,7 +30,7 @@ namespace ShittyVineRI {
                     Data = new AccountData {
                         Username = realUser.Username,
                         UserID = user.Id.ToString(),
-                        Key =  realUser.Username, // we use the Username since I do not feel like dealing with proper sessions right now
+                        Key =  Utils.CreateKey(), // we use the Username since I do not feel like dealing with proper sessions right now
                     },
                     Success = true,
                     Error = ""
@@ -43,33 +44,41 @@ namespace ShittyVineRI {
         public static void SignIn(WebApplication app) {
 
             app.MapPost("/users/authenticate", 
-            async (Account user, ShittyVineRIDb db) =>
+            async (HttpRequest request, HttpContext context, Account user, ShittyVineRIDb db) =>
             {
+                 Console.WriteLine("Accounts " + Newtonsoft.Json.JsonConvert.SerializeObject(user));
                 
-                if(await db.Accounts.FindAsync(user.Email) is Account account) {
+
+                var jsonResponse = new AccountOutput {
+                    Code = "",
+                    Data = new AccountData {
+                        Username = "",
+                        UserID = "",
+                        Key =  Utils.CreateKey(), // we use the Username since I do not feel like dealing with proper sessions right now
+                    },
+                    Success = true,
+                    Error = ""
+                };
+
+                if(await db.Accounts.FindAsync(user.Id) is Account account) {
                     
 
-                    var jsonResponse = new AccountOutput {
+                    jsonResponse = new AccountOutput {
                         Code = "",
                         Data = new AccountData {
                             Username = account.Username,
-                            UserID = user.Id.ToString(),
-                            Key =  account.Username, // we use the Username since I do not feel like dealing with proper sessions right now
+                            UserID = account.Id.ToString(),
+                            Key =  Utils.CreateKey(), // we use the Username since I do not feel like dealing with proper sessions right now
                         },
-                        Success = false,
+                        Success = true,
                         Error = ""
                     };
                     
+                    context.Response.ContentType = "application/json"; 
+
+                } 
  
-                    Console.WriteLine("Response For Accounts " + Newtonsoft.Json.JsonConvert.SerializeObject(jsonResponse));
-
-                    Results.Ok(jsonResponse);
-
-
-                } else {
-                    Results.Unauthorized();
-                }
- 
+                return jsonResponse;
 
                 
             });

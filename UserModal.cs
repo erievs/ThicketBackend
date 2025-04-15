@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ShittyVineRI {
     
@@ -40,9 +41,18 @@ namespace ShittyVineRI {
         public String? Error { get; set; }
     }
 
+        public class ErrorOutput
+    {
+        public String? Code { get; set; }
+        public EmptyData? Data { get; set; }
+        public Boolean? Success { get; set; }
+        public String? Error { get; set; }
+    }
+
     public class AccountData
     {
         public string? Username { get; set; }
+        public string? Email { get; set; }
         public string?  UserID { get; set; }
         public string?  Key { get; set; }
     }
@@ -70,6 +80,10 @@ namespace ShittyVineRI {
 
         public String? Description { get; set; }
 
+        public String? Username { get; set; }
+
+        public DateTime? Date { get; set; }
+
     }
 
     public class VineTimeLine {
@@ -83,14 +97,73 @@ namespace ShittyVineRI {
 
     public class VineTimeLineData {
 
-        public String? Count { get; set; }
-        public Array? Records { get; set; }
-        public int? NextPage { get; set; }
-        public int? PreviousPage { get; set; }
+        public int? Count { get; set; }
+        public List<VineTimeLineRecord>? Records { get; set; }
+        public Int32? NextPage { get; set; }
+        public Int32? PreviousPage { get; set; }
         public int? Size { get; set; }
 
     }
-    
+
+    public class VineTimeLineRecord {
+
+        public String? Username { get; set; }
+        public String? VideoLowUrl { get; set; }
+        public String? VideoDashUrl  { get; set; }
+        public Int32? Liked { get; set; }
+        public Int32? PostToTwitter { get; set; }
+        public String? VideoUrl { get; set; }
+        public String? Description { get; set; }
+        public DateTime? Created { get; set; }
+        public String? AvatarUrl { get; set; }
+        public Int32? UserId { get; set; }
+        public String? ThumbnailUrl { get; set; }
+        public Int32? FoursquareVenueId { get; set; }
+        public Int32? PostToFacebook { get; set; }
+        public Int32? Promoted { get; set; }
+        public Int32? Verified { get; set; }
+        public Int32? PostId { get; set; }
+        public Int32? ExplicitContent { get; set; }
+        public List<Tags>? Tags { get; set; }
+        public String? Location { get; set; }
+    }
+
+    public class Tags
+    {
+
+    }
+
+    public class AccountMe
+    {
+        public String? Code { get; set; }
+        public AccountMeData? Data { get; set; }
+        public Boolean? Success { get; set; }
+        public String? Error { get; set; }
+    }
+
+    public class AccountMeData
+    {
+        public String? Username { get; set; }
+        public String? ProfileBackground { get; set; }
+        public Int32? Following { get; set; }
+        public Int32? FollowerCount { get; set; }
+        public Int32? Verified { get; set; }
+        public String? AvatarUrl { get; set; }
+        public String? Description { get; set; }
+        public Int32? TwitterId { get; set; }
+        public Int32? UserId { get; set; }
+        public Int32? TwitterConnected { get; set; }
+        public Int32? LikeCount { get; set; }
+        public Int32? FacebookConnected { get; set; }
+        public Int32? PostCount { get; set; }
+        public Int32? PhoneNumber { get; set; }
+        public String? Location { get; set; }
+        public Int32? FollowingCount { get; set; }
+        public String? Email { get; set; }
+        public Int32? VerifiedEmail { get; set; }
+        public Int32? LoopCount { get; set; }
+    }
+
     
 
 
