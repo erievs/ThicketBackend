@@ -107,10 +107,12 @@ namespace ShittyVineRI {
 
     public class VineTimeLineRecord {
 
-        public String? Username { get; set; }
-        public String? VideoLowUrl { get; set; }
-        public String? VideoDashUrl  { get; set; }
         public Int32? Liked { get; set; }
+        public String? Username { get; set; }
+        public String? VideoDashUrl  { get; set; }
+        public String? VideoWebmUrl  { get; set; }
+        public String? VideoLowUrl { get; set; }
+        public List<VideoEntry>? VideoUrls { get; set; }
         public Int32? PostToTwitter { get; set; }
         public String? VideoUrl { get; set; }
         public String? Description { get; set; }
@@ -126,6 +128,17 @@ namespace ShittyVineRI {
         public Int32? ExplicitContent { get; set; }
         public List<Tags>? Tags { get; set; }
         public String? Location { get; set; }
+    }
+
+
+    public class VideoEntry
+    {
+        public String? VideoUrl { get; set; }
+        public String? Format { get; set; }
+        public Int32? Default { get; set; }
+        public String? IdStr { get; set; }
+        public Int32? Rate { get; set; }
+        public String? Id { get; set; }
     }
 
     public class Tags

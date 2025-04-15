@@ -22,10 +22,21 @@ namespace ShittyVineRI {
                         
                         
                         var addToVineList = new VineTimeLineRecord {
-                            Username = vine.Username ?? "Placeholder",
-                            VideoLowUrl = vine.VideoUrl,
-                            VideoDashUrl = vine.VideoUrl,
                             Liked = 0,
+                            Username = vine.Username ?? "Placeholder",
+                            VideoDashUrl = vine.VideoUrl,
+                            VideoWebmUrl = null,
+                            VideoLowUrl = vine.VideoUrl,
+                            VideoUrls = new List<VideoEntry> {
+                                new VideoEntry {
+                                    VideoUrl = vine.VideoUrl,
+                                    Format = "h264",
+                                    Default = 1,
+                                    IdStr = "original",
+                                    Rate = 200,
+                                    Id = "original"
+                                }
+                            },
                             PostToTwitter = 0,
                             VideoUrl = vine.VideoUrl,
                             Description = vine.Description ?? "Nothing",

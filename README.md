@@ -1,4 +1,4 @@
-# ShittyVineReimplementation
+# Thicket
 
 **NOTE THIS IS VERY INSECURE AT THE MOMMENT AND IS NOT INTENDED TO BE USE FOR A PUBLIC SERVER**
 
@@ -147,6 +147,7 @@ So your base API URL will probably be like http://192.168.1.150/
 ```
 dotnet tool install --global dotnet-ef
 dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 

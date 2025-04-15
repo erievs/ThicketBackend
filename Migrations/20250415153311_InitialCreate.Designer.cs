@@ -11,7 +11,7 @@ using ShittyVineRI;
 namespace ShittyVineReImplemtion.Migrations
 {
     [DbContext(typeof(ShittyVineRIDb))]
-    [Migration("20250415022643_InitialCreate")]
+    [Migration("20250415153311_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

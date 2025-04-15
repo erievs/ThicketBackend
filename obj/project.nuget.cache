@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BrDbpsaUo60=",
+  "dgSpecHash": "JVYkd7XouHUXXX+rOPNZyC0wZiM/po/tFoYrGWOPihGne9TDL0KPi+n5VOjR5vYWVwxKnjnCfwqxEj0RttABeg==",
   "success": true,
-  "projectFilePath": "/home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/ShittyVineReImplemtion.csproj",
+  "projectFilePath": "/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/ShittyVineReImplemtion.csproj",
   "expectedPackageFiles": [
     "/home/ksportalcraft/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/ksportalcraft/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",

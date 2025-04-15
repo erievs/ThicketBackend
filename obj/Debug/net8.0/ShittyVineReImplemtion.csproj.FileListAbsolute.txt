@@ -419,3 +419,4 @@
 /home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/obj/Debug/net8.0/ref/ShittyVineReImplemtion.dll
 /home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/bin/Debug/net8.0/HelpFull/place_holder_data.json
 /home/ksportalcraft/Documents/C#/ShittyVineReImplemtion/obj/Debug/net8.0/ShittyVineReImplemtion.sourcelink.json
+/home/ksportalcraft/Documents/C#/ShittyVineReimplemntion/obj/Debug/net8.0/ShittyVineReImplemtion.sourcelink.json

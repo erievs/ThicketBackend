@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShittyVineReImplemtion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7505406f3c5e31196baf97d44507d280effe042")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75c5584975a828abb67971b88e36733e8c520f90")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShittyVineReImplemtion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShittyVineReImplemtion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
