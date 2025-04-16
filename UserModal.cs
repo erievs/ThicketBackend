@@ -41,7 +41,7 @@ namespace ShittyVineRI {
         public String? Error { get; set; }
     }
 
-        public class ErrorOutput
+    public class ErrorOutput
     {
         public String? Code { get; set; }
         public EmptyData? Data { get; set; }
@@ -56,6 +56,26 @@ namespace ShittyVineRI {
         public string?  UserID { get; set; }
         public string?  Key { get; set; }
     }
+
+    public class ClietFlags
+    {
+        public String? Code { get; set; }
+        public ClietFlagsData? Data { get; set; }
+        public Boolean? Success { get; set; }
+        public String? Error { get; set; }
+    }
+
+    
+    public class ClietFlagsData
+    {
+       
+        public String? GuestID { get; set; }
+        public Int32? ScribeEnabled { get; set; }
+        public Int32? SectionedSearch { get; set; }
+        public Int32? WideFoVEnabled { get; set; }
+
+    }
+
 
     public class UploadOutput
     {

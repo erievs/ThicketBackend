@@ -40,6 +40,29 @@ namespace ShittyVineRI {
 
 
         }
+
+        public static void WebpageAssetsDeliveryService(WebApplication app) {
+            
+            app.MapGet("/cdn/web/{file_name}", (string file_name) =>  
+            {  
+            
+                var appDataPath = Path.Combine(Environment.CurrentDirectory,
+                    "SiteAssets"
+                );
+
+                string filePath = Path.Combine(appDataPath, $"{file_name}");
+
+                if (file_name.EndsWith(".css")) {
+                   return Results.Content(File.ReadAllText(filePath), "text/css");
+                }
+
+
+                return Results.Stream(new FileStream(filePath, FileMode.Open));  
+
+            });
+
+
+        }
  
 
     }

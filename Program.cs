@@ -61,7 +61,7 @@ app.UseSwaggerUi(config =>
     config.DocExpansion = "list";
 });
 
-// all static because why not
+// whoop all static because why not
 
 TimeLine.TimeLineGraph(app);
 
@@ -77,9 +77,14 @@ UploadHandler.HandlePostingVideos(app);
 
 UserStuff.HandleMe(app);
 
+ExploerStuff.HandleExploreV2(app);
+
 FileDeliveryStuff.VideoDeliveryService(app);
 
 FileDeliveryStuff.ThumbnailDeliveryService(app);
+
+FileDeliveryStuff.WebpageAssetsDeliveryService(app);
+
 
 
 
